@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_indicator: MyString
+  name_question: MyString
+  in_bundle: MyString
+
+two:
+  id_indicator: MyString
+  name_question: MyString
+  in_bundle: MyString

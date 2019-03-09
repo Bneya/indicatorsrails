@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_patient: MyText
+  rut_patient: MyText
+  observator: MyText
+  operator: MyText
+  operator2: MyText
+  notes: MyText
+  q1: 1
+  q2: 1
+  correct_bundle: 1
+
+two:
+  id_patient: MyText
+  rut_patient: MyText
+  observator: MyText
+  operator: MyText
+  operator2: MyText
+  notes: MyText
+  q1: 1
+  q2: 1
+  correct_bundle: 1

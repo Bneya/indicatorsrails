@@ -1,0 +1,2 @@
+module IndicatorlistpageHelper
+end
