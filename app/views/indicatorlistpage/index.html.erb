@@ -1,9 +1,10 @@
-Acá mostramos la lista de indicadores
+Acá mostramos la lista de indicadores <br>
 
 
 <% @indicatorlist.each do |ind| %>
 
-  <%= ind.name_question %>
+  <%= ind.id %>
+  <%= ind.name_indicator %>
 
   <br><br>
 <% end %>

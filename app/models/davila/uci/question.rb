@@ -1,2 +1,2 @@
-class Question < ApplicationRecord
+class Davila::Uci::Question < ApplicationRecord
 end
