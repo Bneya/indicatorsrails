@@ -3,7 +3,11 @@ DB_DAVILA = YAML.load_file(File.join(Rails.root, "config", "database_davila.yml"
 DATABASES = {"davila" => DB_DAVILA}
 
 
-DBPATHS = {"davila" => {"uci" => Davila::Uci
+DBPATHS = {"davila" => {"uci" => {"root" => Davila::Uci ,
+                                  "1" => Davila::Uci::DavilauciInd1,
+                                  "2" => Davila::Uci::DavilauciInd2,
+
+                                  }
 
                         }
 

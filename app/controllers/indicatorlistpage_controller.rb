@@ -6,7 +6,8 @@ class IndicatorlistpageController < ApplicationController
     @workplace = "davila"
     @service = "uci"
 
-    $domain = DBPATHS[@workplace][@service]
+    $DOMAINDICT = DBPATHS[@workplace][@service]
+    $domain = $DOMAINDICT["root"]
 
     # $domain = @service
     @indicatorlist = $domain::Indicator.all()
