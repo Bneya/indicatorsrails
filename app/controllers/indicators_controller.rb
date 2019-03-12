@@ -41,13 +41,14 @@ class IndicatorsController < ApplicationController
   private
 
   def user_params
-    params.require("davila_uci_davilauci_ind1").permit!
+    # puts "davila_uci_davilauci_ind"
+    params.require("davila_uci_davilauci_ind" + $indglobalid.to_s).permit!
 
     # puts "ESTOS SON LOS PARAMS"
     # puts params
 
     #TODO: Tengo que cambiar que agarre los parámetros de cualquier indicador
-    #TODO: añadirle el cálculo de bundle y meterlo en el hash
+    #TODO: añadirle el cálculo de bundle y meterlo en el hashhash ma
 
 
   end
