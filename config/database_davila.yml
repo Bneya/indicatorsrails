@@ -19,5 +19,6 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  url:  <%= ENV["DATABASE_DAVILA_URL"] %>
+  url:  <%= postgres://rghhnokmxumemt:633e69e36a0c2301fbbcace965a40fb340f6f2bb983840194164a36accfc17a3@ec2-50-19-109-120.compute-1.amazonaws.com:5432/d37edkcaia7fk0
+ %>
   pool: <%= ENV["DB_POOL"] || 5 %>
