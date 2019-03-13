@@ -20,4 +20,4 @@ production:
   adapter: postgresql
   encoding: utf8
   url:  postgres://nkvuwloztptdfg:1b08345669815484b720254288856e8374167851a0229fc39779586ca7f7753d@ec2-54-225-95-183.compute-1.amazonaws.com:5432/da8nta3vl0i5qb
-  pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
+  pool: 5
