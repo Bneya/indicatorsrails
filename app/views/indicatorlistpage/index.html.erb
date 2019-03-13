@@ -1,9 +1,15 @@
-Acá mostramos la lista de indicadores
+Acá mostramos la lista de indicadores <br>
 
 
 <% @indicatorlist.each do |ind| %>
 
-  <%= ind.name_question %>
+
+  <% text = ind.id.to_s + "-" + ind.name_indicator %>
 
   <br><br>
+
+  <%= link_to text, {:controller => "indicators",
+                       :action => "index",
+                       :ind_id => ind.id }%>
+
 <% end %>

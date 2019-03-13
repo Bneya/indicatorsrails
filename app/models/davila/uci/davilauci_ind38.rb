@@ -1,2 +1,2 @@
-class DavilauciInd38 < ApplicationRecord
+class Davila::Uci::DavilauciInd38 < ApplicationRecord
 end

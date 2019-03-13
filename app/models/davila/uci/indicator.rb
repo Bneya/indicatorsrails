@@ -1,2 +1,2 @@
-class Indicator < ApplicationRecord
+class Davila::Uci::Indicator < ApplicationRecord
 end

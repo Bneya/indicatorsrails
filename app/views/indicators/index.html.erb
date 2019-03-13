@@ -1,0 +1,24 @@
+Esto es el index
+ <br> <br>
+
+<%= simple_form_for @indicator, url: indicators_path  do |f| %>
+
+  <%= f.input :id_patient %>
+  <%= f.input :rut_patient %>
+  <%= f.input :observator %>
+  <%= f.input :operator %>
+  <%= f.input :operator2 %>
+  <%= f.input :notes %>
+  <% n = 1 %>
+  <% @questions.each do |q| %>
+    <%= n.to_s + "-" + q.name_question %> <br>
+
+    <% @preg = "q" + n.to_s %>
+    <%= f.input @preg, as: :radio_buttons, collection: [['0', 'NO'], ['1', 'SI']], label_method: :second, value_method: :first %>
+    <% n += 1 %>
+  <% end %>
+
+
+
+  <%= f.submit %>
+<% end %>
