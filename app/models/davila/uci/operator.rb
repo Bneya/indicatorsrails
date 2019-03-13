@@ -1,2 +1,2 @@
-class Operator < ApplicationRecord
+class Davila::Uci::Operator < ApplicationRecord
 end

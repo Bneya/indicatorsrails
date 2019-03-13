@@ -4081,7 +4081,7 @@ Davila::Uci::Indicator.create!([
   {name_indicator: "Pauta de observación Cumplimiento norma de instalación de la línea arterial (LAM)", service: "uci"},
   {name_indicator: "Pauta de observación Cumplimiento norma de preparación de la piel previo a instalación de línea arterial (LAM)", service: "uci"}
 ])
-Operator.create!([
+Davila::Uci::Operator.create!([
   {name_operator: "((Seleccionar))", charge: "invalid", service: "uci"},
   {name_operator: "ALEJANDRO GARCIA", charge: "nurse", service: "uci"},
   {name_operator: "ALEX GàMEZ", charge: "doctor", service: "uci"},
