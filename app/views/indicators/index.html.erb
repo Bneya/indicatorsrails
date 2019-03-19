@@ -3,18 +3,40 @@ Esto es el index
 
 <%= simple_form_for @indicator, url: indicators_path  do |f| %>
 
-  <%= f.input :id_patient %>
-  <%= f.input :rut_patient %>
-  <%= f.input :observator %>
-  <%= f.input :operator %>
-  <%= f.input :operator2 %>
+  <%= f.input :id_patient,
+              required: true %>
+  <%= f.input :rut_patient,
+              required: true %>
+  <%= f.input :observator,
+              required: true %>
+  <%= f.input :operator,
+              required: true,
+              collection: @listabonita,
+              :as => :grouped_select,
+              :group_method => :last %>
+  <%= f.input :operator2,
+              required: true,
+              collection: @listabonita,
+              :as => :grouped_select,
+              :group_method => :last,
+              selected: "No aplica"  %>
   <%= f.input :notes %>
   <% n = 1 %>
   <% @questions.each do |q| %>
-    <%= n.to_s + "-" + q.name_question %> <br>
+
+    <% if q.in_bundle %>
+      <%= "*" + n.to_s + "-" + q.name_question %> <br>
+    <% else%>
+      <%= n.to_s + "-" + q.name_question %> <br>
+    <% end %>
+
 
     <% @preg = "q" + n.to_s %>
-    <%= f.input @preg, as: :radio_buttons, collection: [['0', 'NO'], ['1', 'SI']], label_method: :second, value_method: :first %>
+    <%= f.input @preg, as: :radio_buttons,
+                           collection: [['0', 'NO'], ['1', 'SI']],
+                           label_method: :second,
+                           value_method: :first,
+                           required: true %>
     <% n += 1 %>
   <% end %>
 
